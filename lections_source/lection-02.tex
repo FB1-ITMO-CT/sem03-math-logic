@@ -1,6 +1,14 @@
-\documentclass[aspectratio=169]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+\documentclass[lualatex,aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
 \usepackage{amssymb}
 \usepackage{stmaryrd}
 \usepackage{cmll}
@@ -10,7 +18,7 @@
 \setbeamertemplate{navigation symbols}{}
 \usepackage{tikz}
 \usetikzlibrary{hobby,fit,backgrounds,calc,shapes.geometric,patterns}
-%\usetheme{Warsaw}
+
 \begin{document}
 
 \newtheorem{axiom}{Аксиома}

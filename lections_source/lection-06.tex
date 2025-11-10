@@ -1,6 +1,14 @@
-\documentclass[aspectratio=169]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+\documentclass[lualatex,aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
 \usepackage{cancel}
 \usepackage{amssymb}
 \usepackage{stmaryrd}
@@ -14,7 +22,7 @@
 \usepackage{proof}
 \usepackage{multirow}
 \setbeamertemplate{navigation symbols}{}
-%\usetheme{Warsaw}
+
 
 \newtheorem{thm}{Теорема}[section]
 \newtheorem{dfn}{Определение}[section]
@@ -254,16 +262,16 @@ $\alpha\to\beta\notin M$.
 \end{thm}
 \begin{proof}[Схема доказательства]
 \tikz{
-	\node (M) at (0,3) {$M$};
-	\node (M1) at (1,0) {$M^\text{Б}$};
+  \node (M) at (0,3) {$M$};
+  \node (M1) at (1,0) {$M^\text{Б}$};
         \node (Md1) at (6,0) {$\mathcal{M}$};
-	\node (Md) at (7,3) {$\mathcal{M}$};
+  \node (Md) at (7,3) {$\mathcal{M}$};
         \draw[->] (M) -- node[pos=0.2,right]{\hspace{0.2cm}\begin{minipage}{4cm}сохраняет\\непротиворечивость\end{minipage}} (M1);
-	\draw[->] (M1) -- node[below]{\begin{minipage}{4cm}теорема о\\существовании модели\end{minipage}} (Md1);
-	\draw[->] (Md1) -- node[pos=0.8,right]{тоже модель} (Md);
-	\draw[dashed] (-2,1) -- (9,1);
-	\node[above] (Q) at (-2,1) {\it Формулы с кванторами};
-	\node[below] (Qf) at (-2,1) {\it Бескванторные};
+  \draw[->] (M1) -- node[below]{\begin{minipage}{4cm}теорема о\\существовании модели\end{minipage}} (Md1);
+  \draw[->] (Md1) -- node[pos=0.8,right]{тоже модель} (Md);
+  \draw[dashed] (-2,1) -- (9,1);
+  \node[above] (Q) at (-2,1) {\it Формулы с кванторами};
+  \node[below] (Qf) at (-2,1) {\it Бескванторные};
 }
 \end{proof}
 \end{frame}

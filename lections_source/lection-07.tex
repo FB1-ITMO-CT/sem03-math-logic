@@ -1,6 +1,14 @@
-\documentclass[aspectratio=169]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+\documentclass[lualatex,aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
 \usepackage{cancel}
 \usepackage{amssymb}
 \usepackage{stmaryrd}
@@ -15,7 +23,7 @@
 \usepackage{multicol}
 \usepackage{comment}
 \setbeamertemplate{navigation symbols}{}
-%\usetheme{Warsaw}
+
 
 \newtheorem{thm}{Теорема}[section]
 \newtheorem{lmm}{Лемма}[section]

@@ -1,9 +1,17 @@
-\documentclass[aspectratio=169]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+\documentclass[lualatex,aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
 \usepackage{cancel}
 \usepackage{amssymb}
-\usepackage{dutchcal}
+% \usepackage{dutchcal}
 \usepackage{mathrsfs}
 \usepackage{stmaryrd}
 \usepackage{cmll}
@@ -15,7 +23,7 @@
 \usepackage{proof}
 \usepackage{multirow}
 \setbeamertemplate{navigation symbols}{}
-%\usetheme{Warsaw}
+
 
 \newtheorem{thm}{Теорема}[section]
 \newtheorem{lmm}{Теорема}[section]
