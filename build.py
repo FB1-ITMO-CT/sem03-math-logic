@@ -6,10 +6,7 @@ import os
 import shutil
 
 
-async def build_lections():
-    base_path = Path("./lections_source")
-    result_path = Path("./lections_pdf")
-
+async def build_main(base_path: Path, result_path: Path):
     targets = [Path(f) for f in glob.glob(str(base_path / "*.tex"))]
     print(f"Building {len(targets)} files:\n{'\n'.join(map(str, targets))}")
 
@@ -28,7 +25,6 @@ async def build_lections():
 
     print(f"Return codes: {' '.join(map(str, returns))}")
 
-    shutil.rmtree(result_path)
     os.makedirs(str(result_path), exist_ok=True)
 
     for target, ret in zip(targets, returns):
@@ -41,16 +37,29 @@ async def build_lections():
         )
 
 
-def build_homework():
-    pass
+async def build_lections():
+    base_path = Path("./lections_source")
+    result_path = Path("./lections_pdf")
+
+    await build_main(base_path, result_path)
 
 
-def build_colloqs():
-    pass
+async def build_homework():
+    base_path = Path("./homework")
+    result_path = Path("./homework")
+
+    await build_main(base_path, result_path)
+
+
+async def build_colloqs():
+    base_path = Path("./colloqs")
+    result_path = Path("./colloqs")
+
+    await build_main(base_path, result_path)
 
 
 async def main():
-    await build_lections()
+    _ = await aio.gather(build_lections(), build_homework(), build_colloqs())
 
 
 if __name__ == "__main__":
