@@ -1,6 +1,14 @@
-\documentclass[aspectratio=169]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+\documentclass[lualatex,aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
 \usepackage{cancel}
 \usepackage{amssymb}
 \usepackage{stmaryrd}
@@ -153,14 +161,14 @@ $|x|=x$ и утверждение теоремы: $\varphi(x) := |x|=x\rightarro
 \filldraw[gray] (0,0) -- (1.5, 0) -- (1.5, 1) -- (0, 1) -- cycle;
 
 \foreach \x in {0, 1, 2, 3} {
-	\foreach \y in {0, 1, 2, 3} {
+  \foreach \y in {0, 1, 2, 3} {
                 \node at (1.5*\x + 1, \y + 0.6) {
-			\pgfmathparse{(max(\x,\y))*(max(\x,\y)) + \y + ((\y+1)==(max(\x,\y)+1))*\x}%
-			\pgfmathprintnumber{\pgfmathresult}%
-		};
-		\node at (1.5*\x + 0.4, \y + 0.2) {\footnotesize $\langle \x,\y \rangle$};
-		\draw (1.5*\x, \y) -- (1.5*\x +1.5, \y) -- (1.5*\x +1.5, \y +1) -- (1.5*\x, \y +1) -- cycle;
-	}
+      \pgfmathparse{(max(\x,\y))*(max(\x,\y)) + \y + ((\y+1)==(max(\x,\y)+1))*\x}%
+      \pgfmathprintnumber{\pgfmathresult}%
+    };
+    \node at (1.5*\x + 0.4, \y + 0.2) {\footnotesize $\langle \x,\y \rangle$};
+    \draw (1.5*\x, \y) -- (1.5*\x +1.5, \y) -- (1.5*\x +1.5, \y +1) -- (1.5*\x, \y +1) -- cycle;
+  }
 }
 
 \end{tikzpicture}\end{center}
