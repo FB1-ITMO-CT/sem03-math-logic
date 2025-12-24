@@ -1,6 +1,14 @@
-\documentclass[aspectratio=169]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[english,russian]{babel}
+\documentclass[lualatex,aspectratio=169]{beamer}
+
+\usepackage{fontspec}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{FreeMono}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
 \usepackage{cancel}
 \usepackage{amssymb}
 \usepackage{stmaryrd}
@@ -421,30 +429,30 @@ $$\infer{???}{P({\color{red}x})\quad\quad\neg P({\color{red}0})}$$
 
 
 \begin{frame}{Алгебраические термы}
-	\begin{dfn}Алгебраический терм $$\theta := x\:|\:(f(\theta_1,\ldots,\theta_n))$$ 
+  \begin{dfn}Алгебраический терм $$\theta := x\:|\:(f(\theta_1,\ldots,\theta_n))$$ 
 где $x-$переменная, $f(\theta_1,\ldots,\theta_n)-$применение функции. Напомним, что константы --- нульместные
 функциональные символы, собственно переменные будем обозначать последними буквами латинского алфавита. \end{dfn}
-	%\subsection{Уравнение в алгебраических термах $\theta_1=\theta_2$\\Система уравнений в алгебраических термах}
-	\begin{dfn}Система уравнений в алгебраических термах
-	$
-		\begin{cases}
-			\theta_1=\sigma_1&\\
-			\vdots&\\
-			\theta_n=\sigma_n&\\
-		\end{cases}
-	$\par где $\theta_i \text{ и } \sigma_i-\text{термы}$\par
+  %\subsection{Уравнение в алгебраических термах $\theta_1=\theta_2$\\Система уравнений в алгебраических термах}
+  \begin{dfn}Система уравнений в алгебраических термах
+  $
+    \begin{cases}
+      \theta_1=\sigma_1&\\
+      \vdots&\\
+      \theta_n=\sigma_n&\\
+    \end{cases}
+  $\par где $\theta_i \text{ и } \sigma_i-\text{термы}$\par
 \end{dfn}
 \end{frame}
 \begin{frame}{Уравнение в алгебраических термах}
-	\begin{dfn}$\{x_i\}=X-$множество переменных, $\{\theta_i\}=T-$множество термов.\end{dfn}
-	\begin{dfn}Подстановка$-$отображение вида: $\pi_0:X\to T$, тождественное почти везде (за исключением конечного числа переменных).
+  \begin{dfn}$\{x_i\}=X-$множество переменных, $\{\theta_i\}=T-$множество термов.\end{dfn}
+  \begin{dfn}Подстановка$-$отображение вида: $\pi_0:X\to T$, тождественное почти везде (за исключением конечного числа переменных).
         \par $\pi_0(x)$ может быть либо $\pi_0(x)=\theta_i\text{, либо }\pi_0(x)=x$.\end{dfn} 
-	Доопределим $\pi:T\to T$, где \begin{enumerate}
-		\item $\pi(x)=\pi_0(x)$
-		\item $\pi(f(\theta_1, \ldots, \theta_k))=f(\pi(\theta_1), \ldots, \pi(\theta_k))$
-	\end{enumerate}
-	
-	\begin{dfn}Решить уравнение в алгебраических термах$-$найти такую наиболее общую подстановку $\pi$, 
+  Доопределим $\pi:T\to T$, где \begin{enumerate}
+    \item $\pi(x)=\pi_0(x)$
+    \item $\pi(f(\theta_1, \ldots, \theta_k))=f(\pi(\theta_1), \ldots, \pi(\theta_k))$
+  \end{enumerate}
+  
+  \begin{dfn}Решить уравнение в алгебраических термах$-$найти такую наиболее общую подстановку $\pi$, 
         что $\pi(\theta_1)=\pi(\theta_2)$.
 Наиболее общая подстановка --- такая, для которой другие подстановки являются её частными случаями.\end{dfn} 
 \end{frame}
