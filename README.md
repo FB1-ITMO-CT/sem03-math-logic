@@ -5,8 +5,9 @@
 + [Конспект 2011 года](https://github.com/shd/logic2011/blob/master/conspect.pdf)
 + [Теоретические домашние задания](https://github.com/FB1-ITMO-CT/sem03-math-logic/blob/master/hw-theory.pdf)
 + [Краткая инструкция по утилите make](https://github.com/shd/logic2018/blob/master/make.pdf)
-+ [Миграция с pdfLaTeX на LuaLaTeX](https://github.com/FB1-ITMO-CT/sem03-math-logic/blob/master/LUALATEX.md)
 + [О способе оценивания курса](https://github.com/FB1-ITMO-CT/sem03-math-logic/blob/master/EVALS.md)
++ [Миграция с pdfLaTeX на LuaLaTeX](https://github.com/FB1-ITMO-CT/sem03-math-logic/blob/master/LUALATEX.md)
++ [Вопросы к экзамену](https://github.com/shd/logic2025/blob/master/questions.pdf)
 
 ## Лекция 1
 ### Что такое логика и математическая логика. Исчисление высказываний
